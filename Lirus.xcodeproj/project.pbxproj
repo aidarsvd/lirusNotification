@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		481FD83725BB27A800371C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481FD83525BB27A800371C5A /* Main.storyboard */; };
 		481FD83925BB27AA00371C5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481FD83825BB27AA00371C5A /* Assets.xcassets */; };
 		481FD83C25BB27AA00371C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481FD83A25BB27AA00371C5A /* LaunchScreen.storyboard */; };
+		481FD84E25BB335200371C5A /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FD84C25BB335200371C5A /* NotificationCell.swift */; };
+		481FD84F25BB335200371C5A /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 481FD84D25BB335200371C5A /* NotificationCell.xib */; };
+		481FD85525BB379E00371C5A /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FD85425BB379E00371C5A /* NotificationModel.swift */; };
+		485881AF25BDB47F00A00062 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485881AE25BDB47F00A00062 /* NotificationService.swift */; };
+		485881B425BDB56A00A00062 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485881B325BDB56A00A00062 /* BaseViewController.swift */; };
+		74FDD95E8403683C13CD9CA3 /* Pods_Lirus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1647D8D2EA50C8D86A0C52D /* Pods_Lirus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,14 @@
 		481FD83825BB27AA00371C5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		481FD83B25BB27AA00371C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		481FD83D25BB27AA00371C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		481FD84C25BB335200371C5A /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		481FD84D25BB335200371C5A /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		481FD85425BB379E00371C5A /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		485881AE25BDB47F00A00062 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		485881B325BDB56A00A00062 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		927C64706802F60818F91275 /* Pods-Lirus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lirus.release.xcconfig"; path = "Target Support Files/Pods-Lirus/Pods-Lirus.release.xcconfig"; sourceTree = "<group>"; };
+		C3208099F7FA32637E2DFD31 /* Pods-Lirus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lirus.debug.xcconfig"; path = "Target Support Files/Pods-Lirus/Pods-Lirus.debug.xcconfig"; sourceTree = "<group>"; };
+		F1647D8D2EA50C8D86A0C52D /* Pods_Lirus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lirus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74FDD95E8403683C13CD9CA3 /* Pods_Lirus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050558A661F264EB148F6428 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3208099F7FA32637E2DFD31 /* Pods-Lirus.debug.xcconfig */,
+				927C64706802F60818F91275 /* Pods-Lirus.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		481FD82325BB27A800371C5A = {
 			isa = PBXGroup;
 			children = (
 				481FD82E25BB27A800371C5A /* Lirus */,
 				481FD82D25BB27A800371C5A /* Products */,
+				050558A661F264EB148F6428 /* Pods */,
+				B5DE696038237F2E026FF076 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +82,8 @@
 		481FD82E25BB27A800371C5A /* Lirus */ = {
 			isa = PBXGroup;
 			children = (
+				485881B125BDB4C700A00062 /* base */,
+				481FD85325BB375200371C5A /* model */,
 				481FD82F25BB27A800371C5A /* AppDelegate.swift */,
 				481FD83125BB27A800371C5A /* SceneDelegate.swift */,
 				481FD83325BB27A800371C5A /* ViewController.swift */,
@@ -63,8 +91,43 @@
 				481FD83825BB27AA00371C5A /* Assets.xcassets */,
 				481FD83A25BB27AA00371C5A /* LaunchScreen.storyboard */,
 				481FD83D25BB27AA00371C5A /* Info.plist */,
+				481FD85125BB335600371C5A /* cell */,
+				485881AE25BDB47F00A00062 /* NotificationService.swift */,
 			);
 			path = Lirus;
+			sourceTree = "<group>";
+		};
+		481FD85125BB335600371C5A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				481FD84C25BB335200371C5A /* NotificationCell.swift */,
+				481FD84D25BB335200371C5A /* NotificationCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		481FD85325BB375200371C5A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				481FD85425BB379E00371C5A /* NotificationModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		485881B125BDB4C700A00062 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				485881B325BDB56A00A00062 /* BaseViewController.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		B5DE696038237F2E026FF076 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1647D8D2EA50C8D86A0C52D /* Pods_Lirus.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 481FD84025BB27AA00371C5A /* Build configuration list for PBXNativeTarget "Lirus" */;
 			buildPhases = (
+				F8829528CD8168951738EDF9 /* [CP] Check Pods Manifest.lock */,
 				481FD82825BB27A800371C5A /* Sources */,
 				481FD82925BB27A800371C5A /* Frameworks */,
 				481FD82A25BB27A800371C5A /* Resources */,
+				DF415C7AA94AAEDEC28FFA40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481FD84F25BB335200371C5A /* NotificationCell.xib in Resources */,
 				481FD83C25BB27AA00371C5A /* LaunchScreen.storyboard in Resources */,
 				481FD83925BB27AA00371C5A /* Assets.xcassets in Resources */,
 				481FD83725BB27A800371C5A /* Main.storyboard in Resources */,
@@ -132,13 +198,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DF415C7AA94AAEDEC28FFA40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lirus/Pods-Lirus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lirus/Pods-Lirus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lirus/Pods-Lirus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8829528CD8168951738EDF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lirus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		481FD82825BB27A800371C5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481FD84E25BB335200371C5A /* NotificationCell.swift in Sources */,
 				481FD83425BB27A800371C5A /* ViewController.swift in Sources */,
 				481FD83025BB27A800371C5A /* AppDelegate.swift in Sources */,
+				481FD85525BB379E00371C5A /* NotificationModel.swift in Sources */,
+				485881AF25BDB47F00A00062 /* NotificationService.swift in Sources */,
+				485881B425BDB56A00A00062 /* BaseViewController.swift in Sources */,
 				481FD83225BB27A800371C5A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,12 +395,14 @@
 		};
 		481FD84125BB27AA00371C5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3208099F7FA32637E2DFD31 /* Pods-Lirus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J792P79NM3;
 				INFOPLIST_FILE = Lirus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +416,14 @@
 		};
 		481FD84225BB27AA00371C5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 927C64706802F60818F91275 /* Pods-Lirus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J792P79NM3;
 				INFOPLIST_FILE = Lirus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
